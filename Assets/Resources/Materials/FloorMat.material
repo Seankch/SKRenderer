@@ -1,0 +1,17 @@
+{
+    "MatName": "FloorMat",
+    "ShaderName": "Base",
+    "UTintColor": [
+        0.3,
+        0.3,
+        0.3,
+        1.0
+    ],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "",
+    "UNormalMap": "",
+    "UReflective" : 1,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

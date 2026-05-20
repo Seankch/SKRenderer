@@ -1,0 +1,17 @@
+{
+    "MatName": "ogre",
+    "ShaderName": "Base",
+    "UTintColor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "ogre_diffuse",
+    "UNormalMap": "ogre_normalmap",
+    "UReflective" : 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

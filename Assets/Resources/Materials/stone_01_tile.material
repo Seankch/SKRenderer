@@ -1,0 +1,12 @@
+{
+    "MatName": "stone_01_tile",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "stone_01_tile_BaseColor",
+    "UNormalMap": "stone_01_tile_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

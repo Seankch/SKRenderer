@@ -1,0 +1,17 @@
+{
+    "MatName": "Glass",
+    "ShaderName": "Base",
+    "UTintColor": [
+        1.0,
+        1.0,
+        1.0,
+        0.3
+    ],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "",
+    "UNormalMap": "",
+    "UReflective" : 1,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

@@ -1,0 +1,17 @@
+{
+    "MatName": "brickwall_02",
+    "ShaderName": "Base",
+    "UTintColor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "brickwall_02_BaseColor",
+    "UNormalMap": "brickwall_02_Normal",
+    "UReflective" : 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

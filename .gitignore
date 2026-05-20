@@ -397,6 +397,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+# Asset files
+*.png
+*.glb
+
 # Folders
-/Assets
 /lib

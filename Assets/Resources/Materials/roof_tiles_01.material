@@ -1,0 +1,12 @@
+{
+    "MatName": "roof_tiles_01",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "roof_tiles_01_BaseColor",
+    "UNormalMap": "roof_tiles_01_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

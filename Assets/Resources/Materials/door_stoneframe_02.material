@@ -1,0 +1,12 @@
+{
+    "MatName": "door_stoneframe_02",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "door_stoneframe_02_BaseColor",
+    "UNormalMap": "door_stoneframe_02_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

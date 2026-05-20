@@ -1,0 +1,12 @@
+{
+    "MatName": "ornament_01",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "ornament_01_BaseColor",
+    "UNormalMap": "ornament_01_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

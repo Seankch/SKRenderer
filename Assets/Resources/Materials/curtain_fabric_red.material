@@ -1,0 +1,12 @@
+{
+    "MatName": "curtain_fabric_red",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "curtain_fabric_red_BaseColor",
+    "UNormalMap": "curtain_fabric_red_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

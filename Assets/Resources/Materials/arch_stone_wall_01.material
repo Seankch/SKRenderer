@@ -1,0 +1,17 @@
+{
+    "MatName": "arch_stone_wall_01",
+    "ShaderName": "Base",
+    "UTintColor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "arch_stone_wall_01_BaseColor",
+    "UNormalMap": "arch_stone_wall_01_Normal",
+    "UReflective" : 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}

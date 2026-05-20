@@ -1,0 +1,12 @@
+{
+    "MatName": "lionhead_01",
+    "ShaderName": "Base",
+    "UTintColor": [1.0, 1.0, 1.0, 1.0],
+    "CullMode": 3,
+    "IsPremultipliedAlpha": false,
+    "UMainTex": "lionhead_01_BaseColor",
+    "UNormalMap": "lionhead_01_Normal",
+    "UReflective": 0,
+    "URoughness": 0.0,
+    "UMetallic": 0.0
+}
