@@ -29,4 +29,4 @@ Future plans include implementing DX12, pipeline ray tracing, and exploring ray 
 - SPIRV-Reflect: For Vulkan shader reflection, used for implementing the material system 
 
 # Screenshots
-<img src="https://i.imgur.com/GxgqUrK.jpeg" width="600"/>
+<img src="https://i.imgur.com/GxgqUrK.jpeg"/>
