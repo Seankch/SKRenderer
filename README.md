@@ -12,6 +12,7 @@ SkRenderer is a hybrid ray tracing renderer, built using the Vulkan API. It serv
 
 # Engine architecture
 The architecture is designed using dependency injection. Each system's required depedencies are injected through the constructor, allowing the system’s dependencies to be easily visible, improving code clarity, and maintainability.
+
 The graphics system is designed based on Render Hardware Interface (RHI), abstracting the rendering API in its own set of classes. This allows new rendering APIs to be added easily without changing too much of the engine.
 
 # Future plans and improvements
@@ -28,3 +29,4 @@ Future plans include implementing DX12, pipeline ray tracing, and exploring ray 
 - SPIRV-Reflect: For Vulkan shader reflection, used for implementing the material system 
 
 # Screenshots
+
