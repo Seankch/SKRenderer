@@ -17,4 +17,14 @@ The graphics system is designed based on Render Hardware Interface (RHI), abstra
 ## Future plans and improvements
 Future plans include implementing DX12, pipeline ray tracing, and exploring ray tracing effects and techniques.
 
+## Libraries used
+- glfw: For windows creation and management 
+- Vulkan: Main graphics API for developing the renderer 
+- glm: Math library for vectors and matrices 
+- ImGUI: Editor functionalities and display 
+- stb_image: Texture loading 
+- rapidjson: For loading .json material files 
+- entt: Entity component system for managing entities 
+- SPIRV-Reflect: For Vulkan shader reflection, used for implementing the material system 
+
 ## Screenshots
