@@ -1,5 +1,5 @@
 # Introduction
-SkRenderer is a hybrid ray tracing renderer, built using the Vulkan API. It serves as a base sandbox for future graphics implementations.
+SkRenderer is a hybrid ray tracing renderer, built using the Vulkan API. It serves as a base sandbox for exploring and implementing graphics topics.
 
 # Core features
 - Engine architecture designed using Dependency Injection.
