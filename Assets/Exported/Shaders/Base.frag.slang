@@ -1,9 +1,9 @@
 struct PSInput
 {
     float4 pos              : SV_Position; // location = 0 
-    float2 inUV             : TEXCOORD0;   // location = 1
-    float3 inWorldPos       : TEXCOORD1;   // location = 2
-    float3 inWorldNormal    : TEXCOORD2;   // location = 3
+    float2 uv               : TEXCOORD0;   // location = 1
+    float3 worldPos         : TEXCOORD1;   // location = 2
+    float3 worldNormal      : TEXCOORD2;   // location = 3
     float3x3 TBN            : TEXCOORD3;   // location = 4
 };
 
@@ -309,25 +309,26 @@ float3 ComputePointLight(float3 lightDir, float3 viewDir, float3 n, float3 diffu
     return (kD * diffuse / PI + specBrdf) * lightI * max(nDotL, 0.f);
 }
 
+[shader("fragment")]
 float4 main(PSInput i) : SV_Target0
 {
     // Compute normals
-    float3 normal = i.inWorldNormal;
+    float3 normal = i.worldNormal;
     if (uTextureIndexes.UNormalMap >= 0)
     {
         // Lookup normals from normal map
         // Convert to world space using TBN
-        normal = textures[uTextureIndexes.UNormalMap].Sample(i.inUV).rgb;
+        normal = textures[uTextureIndexes.UNormalMap].Sample(i.uv).rgb;
         normal = normal * 2.0f - 1.0f;
         normal = normalize(mul(i.TBN, normal));
     }
 
     // Compute viewdir and world pos
-    float3 worldPos = i.inWorldPos;
+    float3 worldPos = i.worldPos;
     float3 viewDir = normalize(uScene.camPos - worldPos);
 
     // Init fragment color
-    float3 texColor = (uTextureIndexes.UMainTex >= 0) ? textures[uTextureIndexes.UMainTex].Sample(i.inUV).rgb : float3(1, 1, 1);
+    float3 texColor = (uTextureIndexes.UMainTex >= 0) ? textures[uTextureIndexes.UMainTex].Sample(i.uv).rgb : float3(1, 1, 1);
     float3 baseColor = texColor * uMat.UTintColor.rgb;
     float3 ambient = uScene.ambientColorIntensity.rgb * uScene.ambientColorIntensity.a;
     float3 finalColor = (baseColor * ambient);
@@ -378,68 +379,3 @@ float4 main(PSInput i) : SV_Target0
     // Return final color once done
     return float4(finalColor, uMat.UTintColor.a);
 }
-
-/*
-    float3 worldPos = i.inWorldPos;
-    float3 P = i.inWorldPos;
-    float3 N = normalize(i.inWorldNormal);
-
-    // Base albedo
-    float3 texColor = (uTextureIndexes.UMainTex >= 0)? textures[uTextureIndexes.UMainTex].Sample(i.inUV).rgb : float3(1, 1, 1);
-    float3 albedo = texColor * uMat.UTintColor.rgb;
-
-    // Ambient
-    float3 ambient = uScene.ambientColorIntensity.rgb * uScene.ambientColorIntensity.a;
-    float3 lit = albedo * ambient;
-
-    // Apply reflection
-    if (uMat.UReflective == 1)
-    {
-        ApplyReflection(P, N, lit);
-    }
-
-    // Directional lights
-    int dirCount = min(uScene.lightCounts.y, MAX_DIR_LIGHTS);
-    for (int di = 0; di < dirCount; ++di)
-    {
-        GPUDirLight Ld = uScene.dirLights[di];
-        float3 L = normalize(-Ld.direction.xyz);
-        bool shadowed = TraceShadowRay(worldPos, L, 1e4f);
-        if (!shadowed)
-        {
-            float ndotl = max(dot(N, L), 0.0f);
-            lit += albedo * Ld.intensity.rgb * ndotl;
-        }
-    }
-
-    // Point lights
-    int pointCount = min(uScene.lightCounts.x, MAX_POINT_LIGHTS);
-    for (int pi = 0; pi < pointCount; ++pi)
-    {
-        GPUPointLight Lp = uScene.pointLights[pi];
-        float3 toLight = Lp.position.xyz - worldPos;
-        float  dist    = length(toLight);
-        float  range   = Lp.intensity.a;
-        if (range > 0.0f && dist > range)
-            continue;
-
-        float3 L = toLight / max(dist, 1e-6f);
-
-        // Simple range attenuation
-        float att = 1.0f;
-        if (range > 0.0f)
-        {
-            float x = saturate(1.0f - (dist / range));
-            att = x * x;
-        }
-
-        bool shadowed = TraceShadowRay(worldPos, L, dist);
-        if (!shadowed)
-        {
-            float ndotl = max(dot(N, L), 0.0f);
-            lit += albedo * (Lp.intensity.rgb * att) * ndotl;
-        }
-    }
-
-    return float4(lit, uMat.UTintColor.a);
-*/

@@ -76,6 +76,30 @@
     <Filter Include="Resource Files\Materials">
       <UniqueIdentifier>{dd286831-4e90-4a01-9a53-ea186675f01f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Graphics\RenderGraph">
+      <UniqueIdentifier>{78818632-f407-4c27-963d-a256129793bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Rendergraph">
+      <UniqueIdentifier>{008b75e4-f6ce-41d3-8612-cde4d21a637e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement">
+      <UniqueIdentifier>{577452d7-83e5-43d8-b253-47f034df8b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement">
+      <UniqueIdentifier>{5486d99b-7332-465f-8e9d-a86784585ad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement\Descriptors">
+      <UniqueIdentifier>{e7c1ce10-35cb-45c8-a20e-9acb71becfbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement\Compilers">
+      <UniqueIdentifier>{64bfb25b-88b4-48de-9d1b-e1f29ce90056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement\Descriptors">
+      <UniqueIdentifier>{37a3158e-6526-4f56-9fd7-878431851abf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement\Compilers">
+      <UniqueIdentifier>{8a998d8a-0650-4cbe-8b06-8819640da7cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\inc\Graphics\Font.h">
@@ -182,6 +206,12 @@
     </ClInclude>
     <ClInclude Include="..\inc\Graphics\VulkanUtils.h">
       <Filter>Header Files\Graphics\Vulkan\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\AssetManagement\Compilers\AssetCompilerBase.h">
+      <Filter>Header Files\AssetManagement\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\AssetManagement\Compilers\ShaderCompiler.h">
+      <Filter>Header Files\AssetManagement\Compilers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -302,22 +332,25 @@
     <ClCompile Include="..\src\Graphics\VulkanTypes.cpp">
       <Filter>Source Files\Graphics\Vulkan\Base</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\AssetManagement\Compilers\AssetCompilerBase.cpp">
+      <Filter>Source Files\AssetManagement\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AssetManagement\Compilers\ShaderCompiler.cpp">
+      <Filter>Source Files\AssetManagement\Compilers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Assets\Exported\Shaders\Base.frag">
-      <Filter>Resource Files\Shaders</Filter>
-    </None>
-    <None Include="..\Assets\Exported\Shaders\Base.slang">
-      <Filter>Resource Files\Shaders</Filter>
-    </None>
-    <None Include="..\Assets\Exported\Shaders\Base.vert">
-      <Filter>Resource Files\Shaders</Filter>
-    </None>
     <None Include="..\Assets\Resources\Materials\FloorMat.material">
       <Filter>Resource Files\Materials</Filter>
     </None>
     <None Include="..\Assets\Resources\Materials\PBR.material">
       <Filter>Resource Files\Materials</Filter>
+    </None>
+    <None Include="..\Assets\Exported\Shaders\Base.frag.slang">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Exported\Shaders\Base.vert.slang">
+      <Filter>Resource Files\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -44,7 +44,7 @@ public:
     virtual void Init(void) = 0;
     virtual void LateInit(void) = 0;
     virtual void ClearBuffer(void) = 0;
-    virtual void Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha = false, bool _isFirstObject = false) = 0;
+    virtual void Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha = false) = 0;
     virtual void Exit(void) = 0;
     virtual void BeginRender(glm::mat4 const& _viewXForm, glm::mat4 const& _projXForm) = 0;
     virtual void EndRender(void) = 0;

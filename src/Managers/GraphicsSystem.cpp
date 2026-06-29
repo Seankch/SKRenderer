@@ -107,7 +107,6 @@ void GraphicsSystem::RenderRasterize()
 
         // Render all game objects
         auto& reg = entityMgr->GetECS();
-        bool isFirstObject = true;
         for (auto& ent : reg.view<entt::entity>())
         {
             // Check if entity has MeshRenderer component
@@ -150,11 +149,12 @@ void GraphicsSystem::RenderRasterize()
             {
                 // Get mesh's material instance
                 Material* matInstance = mr.GetMatInstance(static_cast<int>(j));
-                if (!matInstance || matInstance->GetName().empty()) {
-                    // Fall back to global material
+                if (!matInstance || matInstance->GetName().empty()) 
+                {
+                    // Fall back to default material
                     matInstance = resourceMgr->GetResource<Material>(mr.GetMaterialList()[j]);
 
-                    // If global material does not exists, don't render
+                    // If default material does not exists, don't render
                     if (!matInstance || matInstance->GetName().empty())
                     {
                         continue;
@@ -175,11 +175,8 @@ void GraphicsSystem::RenderRasterize()
 
                 // Render all meshes in model
                 mainRenderer->SetCullMode(matInstance->GetCullMode());
-                mainRenderer->Render(model->mMeshes[j], *matInstance, M * model->mMeshes[j].initialXFormMat, matInstance->GetIsPremultipliedAlpha(), isFirstObject);
+                mainRenderer->Render(model->mMeshes[j], *matInstance, M * model->mMeshes[j].initialXFormMat, matInstance->GetIsPremultipliedAlpha());
                 mainRenderer->ResetCullMode();
-
-                // Set to false
-                isFirstObject = false;
             }
         }
 

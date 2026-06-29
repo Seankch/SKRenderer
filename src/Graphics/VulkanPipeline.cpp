@@ -2,7 +2,9 @@
     Includes
 *****************************************************/
 #include "Graphics/VulkanPipeline.h"
+#include "Graphics/VulkanTypes.h"
 #include <stdexcept>
+#include <array>
 
 VulkanPipeline::VulkanPipeline()
 {
@@ -32,13 +34,42 @@ void VulkanPipeline::BuildPipeline(VkDevice const& _device, std::vector<VkDynami
     dynamicState.dynamicStateCount = static_cast<uint32_t>(_dynamicStates.size());
     dynamicState.pDynamicStates = _dynamicStates.data();
 
+    // Set vertex input binding
+    VkVertexInputBindingDescription vertexInputBinding{};
+    vertexInputBinding.binding = 0;
+    vertexInputBinding.stride = sizeof(Vertex);
+    vertexInputBinding.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
+
+    // Set vertex input attribs
+    std::array<VkVertexInputAttributeDescription, 4> vertexInputAttribs{};
+    // Position
+    vertexInputAttribs[0].binding = 0;
+    vertexInputAttribs[0].location = 0;
+    vertexInputAttribs[0].format = VK_FORMAT_R32G32B32_SFLOAT;
+    vertexInputAttribs[0].offset = offsetof(Vertex, position);
+    // UV
+    vertexInputAttribs[1].binding = 0;
+    vertexInputAttribs[1].location = 1;
+    vertexInputAttribs[1].format = VK_FORMAT_R32G32_SFLOAT;
+    vertexInputAttribs[1].offset = offsetof(Vertex, uv);
+    // Normal
+    vertexInputAttribs[2].binding = 0;
+    vertexInputAttribs[2].location = 2;
+    vertexInputAttribs[2].format = VK_FORMAT_R32G32B32_SFLOAT;
+    vertexInputAttribs[2].offset = offsetof(Vertex, normal);
+    // Tangent
+    vertexInputAttribs[3].binding = 0;
+    vertexInputAttribs[3].location = 3;
+    vertexInputAttribs[3].format = VK_FORMAT_R32G32B32A32_SFLOAT;
+    vertexInputAttribs[3].offset = offsetof(Vertex, tangent);
+
     // Specify format of vertex data to be passed to vertex shader
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-    vertexInputInfo.vertexBindingDescriptionCount = 0;
-    vertexInputInfo.pVertexBindingDescriptions = nullptr;
-    vertexInputInfo.vertexAttributeDescriptionCount = 0;
-    vertexInputInfo.pVertexAttributeDescriptions = nullptr;
+    vertexInputInfo.vertexBindingDescriptionCount = 1;
+    vertexInputInfo.pVertexBindingDescriptions = &vertexInputBinding;
+    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(vertexInputAttribs.size());
+    vertexInputInfo.pVertexAttributeDescriptions = vertexInputAttribs.data();
 
     // Init viewport state create info
     VkPipelineViewportStateCreateInfo viewportState{};

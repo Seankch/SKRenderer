@@ -133,6 +133,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\inc\AssetManagement\Compilers\AssetCompilerBase.h" />
+    <ClInclude Include="..\inc\AssetManagement\Compilers\ShaderCompiler.h" />
     <ClInclude Include="..\inc\Components\Camera.h" />
     <ClInclude Include="..\inc\Components\Light.h" />
     <ClInclude Include="..\inc\Components\MeshRenderer.h" />
@@ -177,6 +179,8 @@
     <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui_tables.cpp" />
     <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui_widgets.cpp" />
     <ClCompile Include="..\lib\SPIRV-Reflect-main\spirv_reflect.cpp" />
+    <ClCompile Include="..\src\AssetManagement\Compilers\AssetCompilerBase.cpp" />
+    <ClCompile Include="..\src\AssetManagement\Compilers\ShaderCompiler.cpp" />
     <ClCompile Include="..\src\Components\Camera.cpp" />
     <ClCompile Include="..\src\Components\Light.cpp" />
     <ClCompile Include="..\src\Components\MeshRenderer.cpp" />
@@ -211,9 +215,8 @@
     <ClCompile Include="..\src\Managers\WindowsManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Assets\Exported\Shaders\Base.frag" />
-    <None Include="..\Assets\Exported\Shaders\Base.slang" />
-    <None Include="..\Assets\Exported\Shaders\Base.vert" />
+    <None Include="..\Assets\Exported\Shaders\Base.frag.slang" />
+    <None Include="..\Assets\Exported\Shaders\Base.vert.slang" />
     <None Include="..\Assets\Resources\Materials\FloorMat.material" />
     <None Include="..\Assets\Resources\Materials\PBR.material" />
   </ItemGroup>

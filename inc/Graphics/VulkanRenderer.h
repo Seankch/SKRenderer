@@ -31,7 +31,7 @@ public:
     void Init(void);
     void LateInit(void);
     void ClearBuffer(void);
-    void Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha = false, bool _isFirstObject = false);
+    void Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha = false);
     void Exit(void);
     void BeginRender(glm::mat4 const& _viewXForm, glm::mat4 const& _projXForm);
     void EndRender(void);

@@ -161,7 +161,7 @@ void VulkanRenderer::ClearBuffer()
     vkCmdClearColorImage(cmd, mDrawImg->image, VK_IMAGE_LAYOUT_GENERAL, &clearVal, 1, &clearRange);
 }
 
-void VulkanRenderer::Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha, bool _isFirstObject)
+void VulkanRenderer::Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 const& _modelXForm, bool _hasPreMultipliedAlpha)
 {
     // Get current frame
     FrameData& frame = GetCurrFrame();
@@ -202,7 +202,7 @@ void VulkanRenderer::Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 
     vkCmdBindDescriptorSets(cmd,
         VK_PIPELINE_BIND_POINT_GRAPHICS,
         mPipelineMap[_mat.GetName()].GetPipelineLayout(),
-        0,                                  
+        0,
         static_cast<uint32_t>(std::size(sets)),
         sets,
         0,
@@ -211,9 +211,13 @@ void VulkanRenderer::Render(Model::Mesh const& _mesh, Material& _mat, glm::mat4 
     // Set push constants
     GPUDrawPushConstants pushConstants;
     pushConstants.worldMatrix = _modelXForm;
-    pushConstants.vertexBuffer = _mesh.meshBuffer.vertexBufferAddress;
+    pushConstants.normalMatrix = glm::mat3(glm::transpose(glm::inverse(_modelXForm)));
     vkCmdPushConstants(cmd, mPipelineMap[_mat.GetName()].GetPipelineLayout(), VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(GPUDrawPushConstants), &pushConstants);
     
+    // Bind vertex buffer
+    VkDeviceSize vertexBufferOffset{}; // 0 offset
+    vkCmdBindVertexBuffers(cmd, 0, 1, &_mesh.meshBuffer.vertexBuffer.buffer, &vertexBufferOffset);
+
     // Bind index buffer
     vkCmdBindIndexBuffer(cmd, _mesh.meshBuffer.indexBuffer.buffer, 0, VK_INDEX_TYPE_UINT32);
 
@@ -854,8 +858,7 @@ void VulkanRenderer::LoadMeshToRenderer(Model::Mesh& _mesh)
     for (size_t i = 0; i < vtxCount; ++i)
     {
         vertices[i].position = _mesh.posVtxList[i];
-        vertices[i].uvX = _mesh.uvVertex[i].x;
-        vertices[i].uvY = _mesh.uvVertex[i].y;
+        vertices[i].uv = _mesh.uvVertex[i];
         vertices[i].normal = _mesh.normals[i];
         vertices[i].tangent = _mesh.tangents[i];
     }
@@ -868,7 +871,7 @@ void VulkanRenderer::LoadMeshToRenderer(Model::Mesh& _mesh)
     _mesh.indicesCount = _mesh.idxVertex.size();
 
     // Create vertex buffer and find address of vertex buffer
-    _mesh.meshBuffer.vertexBuffer.CreateBuffer(mAllocator, vertBufferSize, VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT | VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHR, VMA_MEMORY_USAGE_GPU_ONLY);
+    _mesh.meshBuffer.vertexBuffer.CreateBuffer(mAllocator, vertBufferSize, VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_2_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT | VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHR, VMA_MEMORY_USAGE_GPU_ONLY);
     VkBufferDeviceAddressInfo vertBufferDeviceAdressInfo{ .sType = VK_STRUCTURE_TYPE_BUFFER_DEVICE_ADDRESS_INFO, .buffer = _mesh.meshBuffer.vertexBuffer.buffer };
     _mesh.meshBuffer.vertexBufferAddress = vkGetBufferDeviceAddress(mLogicalDevice, &vertBufferDeviceAdressInfo);
 
@@ -1986,8 +1989,9 @@ void VulkanRenderer::CreateLogicalDevice(void)
     features12.descriptorBindingVariableDescriptorCount = VK_TRUE;
 
     // Enable vk1.1 feeatures
-    VkPhysicalDeviceVulkan12Features features11{};
+    VkPhysicalDeviceVulkan11Features features11{};
     features11.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_1_FEATURES;
+    features11.shaderDrawParameters = VK_TRUE;
 
     // Form pNext chain
     deviceFeatures2.pNext = &features13;

@@ -6,6 +6,7 @@
 *****************************************************/
 #include <Managers/ManagerBase.h>
 #include <entt/entt.hpp>
+#include "AssetManagement/Compilers/ShaderCompiler.h"
 
 class AssetManager : public ManagerBase
 {
@@ -25,10 +26,13 @@ public:
 	void Unload();
 
 private:
+	// Compile functions
 	void CompileMeshes(std::string const& _filePath);
 	void CompileTextures(std::string const& _filePath);
 	void CompileShaders(std::string const& _filePath);
-	void RunExecutable(std::string const& _executablePath);
+
+	// Asset compilers
+	ShaderCompiler shaderCompiler;
 };
 
 #endif

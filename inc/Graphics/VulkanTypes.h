@@ -43,13 +43,12 @@ struct AllocatedImage
 struct Vertex
 {
     glm::vec3 position;
-    float uvX;
+    glm::vec2 uv;
     glm::vec3 normal;
-    float uvY;
     glm::vec4 tangent;
 };
 
-// Holds the resources needed for a mesh
+// Mesh resources
 struct GPUMeshBuffers 
 {
     AllocatedBuffer indexBuffer;
@@ -58,11 +57,11 @@ struct GPUMeshBuffers
     VkDeviceAddress indexBufferAddress;
 };
 
-// Push constants for our mesh object draws
+// Push constants for mesh object rendering
 struct GPUDrawPushConstants
 {
     glm::mat4 worldMatrix;
-    VkDeviceAddress vertexBuffer;
+    glm::mat4 normalMatrix;
 };
 
 // For material/shader reflection
@@ -98,6 +97,7 @@ struct GPUSceneData
     GPUDirLight   dirLights[MAX_DIR_LIGHTS];
     glm::vec3 camPos;
     glm::uvec2 fboDims;
+    float padding;
 };
 
 #endif

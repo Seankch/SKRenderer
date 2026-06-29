@@ -96,8 +96,8 @@ void Engine::Exit()
     std::vector<ManagerBase*>& containerList = diContainer.GetContainerList();
 
     // Unload all managers from bottom up
-    int startIdx = static_cast<int>(containerList.size()) - 1;
-    for (int i = startIdx; i >= 0; --i)
+    int endIdx = static_cast<int>(containerList.size()) - 1;
+    for (int i = endIdx; i >= 0; --i)
     {
         containerList[i]->Unload();
         delete containerList[i];
