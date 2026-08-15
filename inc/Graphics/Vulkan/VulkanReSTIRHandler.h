@@ -4,8 +4,8 @@
 /*****************************************************
 	Includes
 *****************************************************/
-#include <Graphics/VulkanTypes.h>
-#include <Graphics/VulkanDescriptorPool.h>
+#include <Graphics/Vulkan/VulkanTypes.h>
+#include <Graphics/Vulkan/VulkanDescriptorPool.h>
 
 struct Reservoir
 {

@@ -7,7 +7,7 @@
 #include "glm.hpp"
 #include "vulkan/vulkan.h"
 #include "Vulkan/Include/vma/vk_mem_alloc.h"
-#include "Graphics/VulkanDescriptorWriter.h"
+#include "Graphics/Vulkan/VulkanDescriptorWriter.h"
 #include "Graphics/GraphicsDefine.h"
 
 struct AllocatedBuffer 

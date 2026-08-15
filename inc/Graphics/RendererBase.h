@@ -1,17 +1,3 @@
-/*!
-All content © 2024 DigiPen Institute of Technology Singapore, all rights reserved.
-@file       RendererBase.h
-@author     Sean KWEK Chin Huat
-@co-author
-
-----------------------------------------------------------------------------
-
-@course     CSD3401F24
-@project    CSD3401F24 Software Engineering Project 5
-
-@brief      This header file contains the base class to encapsulate a graphics renderer.
-*//*______________________________________________________________________*/
-
 #ifndef RENDERER_BASE
 #define RENDERER_BASE
 
@@ -32,7 +18,7 @@ public:
         RM_LINES,
         RM_FILLED
     };
-    enum RENDERER_TYPE 
+    enum RENDERER_TYPE  
     {
         RT_NONE,
         RT_OPENGL,

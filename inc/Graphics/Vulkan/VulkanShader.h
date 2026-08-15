@@ -5,8 +5,8 @@
     Includes
 *****************************************************/
 #include "Vulkan/Include/vma/vk_mem_alloc.h"
-#include "Graphics/VulkanDescriptorWriter.h"
-#include "Graphics/VulkanTypes.h"
+#include "Graphics/Vulkan/VulkanDescriptorWriter.h"
+#include "Graphics/Vulkan/VulkanTypes.h"
 #include <SPIRV-Reflect-main/spirv_reflect.h>
 #include <vector>
 #include <span>

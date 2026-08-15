@@ -1,5 +1,5 @@
-#include "Graphics/VulkanTypes.h"
-#include "Graphics/VulkanUtils.h"
+#include "Graphics/Vulkan/VulkanTypes.h"
+#include "Graphics/Vulkan/VulkanUtils.h"
 #include <stdexcept>
 
 void AllocatedBuffer::CreateBuffer(VmaAllocator& _allocator, VkDeviceSize _allocSize, VkBufferUsageFlags _usage, VmaMemoryUsage _memoryUsage)

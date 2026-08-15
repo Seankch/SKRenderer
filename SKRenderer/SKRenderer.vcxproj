@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e73aed65-b6c2-4e9f-b1a6-6f52c8754277}</ProjectGuid>
-    <RootNamespace>VulkanEngine</RootNamespace>
+    <ProjectGuid>{0747485c-f93f-432b-b684-2b6c45e9a461}</ProjectGuid>
+    <RootNamespace>SKRenderer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -59,17 +59,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SKRendererProps.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SKRendererProps.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="VulkanEngineProps.props" />
+    <Import Project="SKRendererProps.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="VulkanEngineProps.props" />
+    <Import Project="SKRendererProps.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -78,7 +80,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,7 +94,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,7 +108,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +122,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,19 +143,24 @@
     <ClInclude Include="..\inc\Graphics\GraphicsDefine.h" />
     <ClInclude Include="..\inc\Graphics\Material.h" />
     <ClInclude Include="..\inc\Graphics\Model.h" />
+    <ClInclude Include="..\inc\Graphics\ObjectPicker.h" />
+    <ClInclude Include="..\inc\Graphics\RenderContext.h" />
     <ClInclude Include="..\inc\Graphics\RendererBase.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanReSTIRHandler.h" />
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderGraph.h" />
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPassBase.h" />
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPasses\GBufferPass.h" />
     <ClInclude Include="..\inc\Graphics\Shader.h" />
     <ClInclude Include="..\inc\Graphics\Texture.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanDescriptor.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanDescriptorPool.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanDescriptorWriter.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanLoader.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanPipeline.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanRenderer.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanShader.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanTypes.h" />
-    <ClInclude Include="..\inc\Graphics\VulkanUtils.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptor.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptorPool.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptorWriter.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanLoader.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanPipeline.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanRenderer.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanReSTIRHandler.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanShader.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanTypes.h" />
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanUtils.h" />
     <ClInclude Include="..\inc\Managers\AssetManager.h" />
     <ClInclude Include="..\inc\Managers\EngineUIManager.h" />
     <ClInclude Include="..\inc\Managers\EntityManager.h" />
@@ -169,16 +172,11 @@
     <ClInclude Include="..\inc\Managers\RaytraceManager.h" />
     <ClInclude Include="..\inc\Managers\RendererManager.h" />
     <ClInclude Include="..\inc\Managers\ResourceManager.h" />
+    <ClInclude Include="..\inc\Managers\TextManager.h" />
+    <ClInclude Include="..\inc\Managers\UIManager.h" />
     <ClInclude Include="..\inc\Managers\WindowsManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\backends\imgui_impl_glfw.cpp" />
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\backends\imgui_impl_vulkan.cpp" />
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui.cpp" />
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui_draw.cpp" />
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui_tables.cpp" />
-    <ClCompile Include="..\lib\imgui-1.91.0-docking\imgui_widgets.cpp" />
-    <ClCompile Include="..\lib\SPIRV-Reflect-main\spirv_reflect.cpp" />
     <ClCompile Include="..\src\AssetManagement\Compilers\AssetCompilerBase.cpp" />
     <ClCompile Include="..\src\AssetManagement\Compilers\ShaderCompiler.cpp" />
     <ClCompile Include="..\src\Components\Camera.cpp" />
@@ -190,17 +188,20 @@
     <ClCompile Include="..\src\Graphics\Font.cpp" />
     <ClCompile Include="..\src\Graphics\Material.cpp" />
     <ClCompile Include="..\src\Graphics\Model.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanReSTIRHandler.cpp" />
+    <ClCompile Include="..\src\Graphics\ObjectPicker.cpp" />
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderGraph.cpp" />
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderPasses\GBufferPass.cpp" />
     <ClCompile Include="..\src\Graphics\Shader.cpp" />
     <ClCompile Include="..\src\Graphics\Texture.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanDescriptor.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanDescriptorPool.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanDescriptorWriter.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanLoader.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanPipeline.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanRenderer.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanShader.cpp" />
-    <ClCompile Include="..\src\Graphics\VulkanTypes.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptor.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptorPool.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptorWriter.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanLoader.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanPipeline.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanRenderer.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanReSTIRHandler.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanShader.cpp" />
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanTypes.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Managers\AssetManager.cpp" />
     <ClCompile Include="..\src\Managers\EngineUIManager.cpp" />
@@ -212,13 +213,9 @@
     <ClCompile Include="..\src\Managers\RaytraceManager.cpp" />
     <ClCompile Include="..\src\Managers\RendererManager.cpp" />
     <ClCompile Include="..\src\Managers\ResourceManager.cpp" />
+    <ClCompile Include="..\src\Managers\TextManager.cpp" />
+    <ClCompile Include="..\src\Managers\UIManager.cpp" />
     <ClCompile Include="..\src\Managers\WindowsManager.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Assets\Exported\Shaders\Base.frag.slang" />
-    <None Include="..\Assets\Exported\Shaders\Base.vert.slang" />
-    <None Include="..\Assets\Resources\Materials\FloorMat.material" />
-    <None Include="..\Assets\Resources\Materials\PBR.material" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

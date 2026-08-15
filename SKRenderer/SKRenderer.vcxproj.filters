@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement">
+      <UniqueIdentifier>{d08902ea-4156-467a-863b-bea3257eaf39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{41d57117-eec5-4fe2-b1bc-0692d901cb61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DIContainer">
+      <UniqueIdentifier>{83f07465-7394-48a0-8396-3e3ce4effa26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{536e4f9c-4fb4-4f42-b941-623ad58257ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{e8b29a3f-09aa-4834-be5f-62ebaefa3d35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\RenderGraph">
+      <UniqueIdentifier>{20424368-85ec-4c1b-933a-3a264c3a4397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Vulkan">
+      <UniqueIdentifier>{3a5d6878-434a-45b8-8cea-83a00eee98fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{5d32b057-89db-4852-a8b9-a3e5d7f82dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement">
+      <UniqueIdentifier>{7885a6af-6f59-49b2-89ef-32ab7eee6628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{4418b151-14f1-4a31-88a2-75570ee25073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DIContainer">
+      <UniqueIdentifier>{025789be-0175-4c95-8f98-90e82c72c571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{7631e7ed-ce89-4ac1-8a62-1c6bfa8f9d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{c64e2334-e360-4147-add3-e361dfe0664c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\RenderGraph">
+      <UniqueIdentifier>{5fbd5efb-7771-4922-b6d9-74b20804d224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\Vulkan">
+      <UniqueIdentifier>{561d57e6-2157-4fa4-ac60-b96492f5db9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{aaadcf68-48bb-45e7-a8db-6e148426cc0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement\Compilers">
+      <UniqueIdentifier>{cf4b1ef4-e79b-4b66-949d-15957eff9443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement\Descriptors">
+      <UniqueIdentifier>{ad413f14-7fcd-4bea-b409-9b3ea0891d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement\Compilers">
+      <UniqueIdentifier>{5ea5e6c4-eb38-4cdb-ad60-f7dba726fa97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement\Descriptors">
+      <UniqueIdentifier>{ee38d5e2-8bc5-40e4-ae8b-e87687ca5b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\RenderGraph\RenderPasses">
+      <UniqueIdentifier>{8aa8828a-49a2-4668-83c0-c091c8c0cea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\RenderGraph\RenderPasses">
+      <UniqueIdentifier>{3fc4c4dc-3086-4569-8575-6b339b271146}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\AssetManagement\Compilers\AssetCompilerBase.h">
+      <Filter>Header Files\AssetManagement\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\AssetManagement\Compilers\ShaderCompiler.h">
+      <Filter>Header Files\AssetManagement\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Components\Camera.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Components\Light.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Components\MeshRenderer.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Components\Transform.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DIContainer\DIContainer.h">
+      <Filter>Header Files\DIContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Engine\Engine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptor.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptorPool.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptorWriter.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanLoader.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanPipeline.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanRenderer.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanReSTIRHandler.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanShader.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanTypes.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Vulkan\VulkanUtils.h">
+      <Filter>Header Files\Graphics\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderGraph.h">
+      <Filter>Header Files\Graphics\RenderGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPassBase.h">
+      <Filter>Header Files\Graphics\RenderGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Font.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\GraphicsDefine.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Material.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Model.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\ObjectPicker.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\RendererBase.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Shader.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\Texture.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\AssetManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\EngineUIManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\EntityManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\GraphicsSystem.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\JSONManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\LightingSystem.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\ManagerBase.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\MaterialManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\RaytraceManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\RendererManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\ResourceManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\TextManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\UIManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Managers\WindowsManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPasses\GBufferPass.h">
+      <Filter>Header Files\Graphics\RenderGraph\RenderPasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Graphics\RenderContext.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AssetManagement\Compilers\AssetCompilerBase.cpp">
+      <Filter>Source Files\AssetManagement\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AssetManagement\Compilers\ShaderCompiler.cpp">
+      <Filter>Source Files\AssetManagement\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Camera.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Light.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\MeshRenderer.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Components\Transform.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DIContainer\DIContainer.cpp">
+      <Filter>Source Files\DIContainer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Engine\Engine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptor.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptorPool.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptorWriter.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanLoader.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanPipeline.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanRenderer.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanReSTIRHandler.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanShader.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Vulkan\VulkanTypes.cpp">
+      <Filter>Source Files\Graphics\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderGraph.cpp">
+      <Filter>Source Files\Graphics\RenderGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Font.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Material.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Model.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\ObjectPicker.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Shader.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\Texture.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\AssetManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\EngineUIManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\EntityManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\GraphicsSystem.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\JSONManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\LightingSystem.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\MaterialManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\RaytraceManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\RendererManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\ResourceManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\TextManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\UIManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Managers\WindowsManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderPasses\GBufferPass.cpp">
+      <Filter>Source Files\Graphics\RenderGraph\RenderPasses</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

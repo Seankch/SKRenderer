@@ -1,17 +1,3 @@
-/*!
-All content © 2024 DigiPen Institute of Technology Singapore, all rights reserved.
-@file       Image.cpp
-@author     Sean KWEK Chin Huat
-@co-author
-
-----------------------------------------------------------------------------
-
-@course     CSD3401F24
-@project    CSD3401F24 Software Engineering Project 5
-
-@brief      This file contains definitions for functions to store UI properties.
-*//*______________________________________________________________________*/
-
 #include <Components/Image.h>
 #include <rttr/registration>
 #include "EngineUI/Properties.h"

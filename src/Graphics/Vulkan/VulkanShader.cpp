@@ -1,5 +1,5 @@
-#include "Graphics/VulkanShader.h"
-#include "Graphics/VulkanDescriptor.h"
+#include "Graphics/Vulkan/VulkanShader.h"
+#include "Graphics/Vulkan/VulkanDescriptor.h"
 
 VulkanShader::VulkanShader()
 : vertShader{}, fragShader{}

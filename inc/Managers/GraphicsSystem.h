@@ -13,6 +13,7 @@
 #include <Components/MeshRenderer.h>
 #include <Components/Transform.h>
 #include <Components/Text.h>
+#include <Graphics/RenderGraph/RenderGraph.h>
 
 #pragma warning(push, 0)
 #include <document.h>
@@ -21,8 +22,6 @@
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
 #pragma warning(pop)
-
-#define SCREEN_STR "Screen"
 
 class GraphicsSystem : public ManagerBase
 {
@@ -55,8 +54,6 @@ public:
 
 	// Graphics system functions
 	void Render();
-	void RenderRasterize();
-    void RenderRayTrace();
 
 	// Other functions
 	Camera* GetCamera(VIEWPORT_WINDOW _viewport);
@@ -74,6 +71,9 @@ private:
 
     // For renderer type
     RENDERER_TYPE mRendererType;
+
+	// RenderGraph
+    RenderGraph mRenderGraph;
 
 	// Required managers
 	WindowsManager* windowsMgr = nullptr;

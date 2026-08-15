@@ -1,12 +1,12 @@
 /*****************************************************
     Includes
 *****************************************************/
-#include "Graphics/VulkanRenderer.h"
-#include "Graphics/VulkanUtils.h"
-#include "Graphics/VulkanDescriptorPool.h"
-#include "Graphics/VulkanDescriptor.h"
-#include "Graphics/VulkanDescriptorWriter.h"
-#include "Graphics/VulkanShader.h"
+#include "Graphics/Vulkan/VulkanRenderer.h"
+#include "Graphics/Vulkan/VulkanUtils.h"
+#include "Graphics/Vulkan/VulkanDescriptorPool.h"
+#include "Graphics/Vulkan/VulkanDescriptor.h"
+#include "Graphics/Vulkan/VulkanDescriptorWriter.h"
+#include "Graphics/Vulkan/VulkanShader.h"
 #include "Managers/WindowsManager.h"
 #include "glm/gtc/type_ptr.hpp"
 #include <filesystem>

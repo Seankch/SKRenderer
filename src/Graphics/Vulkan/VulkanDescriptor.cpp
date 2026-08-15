@@ -1,4 +1,4 @@
-#include "Graphics/VulkanDescriptor.h"
+#include "Graphics/Vulkan/VulkanDescriptor.h"
 
 void VulkanDescriptor::AddBinding(uint32_t _binding, VkDescriptorType _type, uint32_t _descCount)
 {

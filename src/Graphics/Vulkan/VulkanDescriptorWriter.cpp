@@ -1,4 +1,4 @@
-#include "Graphics/VulkanDescriptorWriter.h"
+#include "Graphics/Vulkan/VulkanDescriptorWriter.h"
 
 void VulkanDescriptorWriter::WriteImage(int _binding, VkImageView _image, VkSampler _sampler, VkImageLayout _layout, VkDescriptorType _type, uint32_t _dstArrayElement)
 {

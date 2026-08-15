@@ -24,10 +24,6 @@ public:
 	void SetPos(glm::vec3 _pos);
 	void SetScale(glm::vec3 _scale);
 	void SetRot(glm::vec3 _rot);
-
-	glm::vec3 GetForwardVector(void) const;
-	glm::vec3 GetRightVector(void) const;
-	glm::vec3 GetUpVector(void) const;
 private:
 	glm::vec3 mPos{};
 	glm::vec3 mScale{};

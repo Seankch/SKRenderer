@@ -1,4 +1,4 @@
-#include <Graphics/VulkanLoader.h>
+#include <Graphics/Vulkan/VulkanLoader.h>
 
 void VulkanLoader::LoadFunctions(VkDevice _logicalDevice)
 {

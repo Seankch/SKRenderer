@@ -1,4 +1,4 @@
-#include "Graphics/VulkanDescriptorPool.h"
+#include "Graphics/Vulkan/VulkanDescriptorPool.h"
 
 void VulkanDescriptorPool::InitPool(VkDevice _device, uint32_t _maxSets, std::span<PoolSizeRatio> _poolRatios)
 {

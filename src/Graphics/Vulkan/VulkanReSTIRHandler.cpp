@@ -1,5 +1,5 @@
-#include "Graphics/VulkanReSTIRHandler.h"
-#include "Graphics/VulkanDescriptor.h"
+#include "Graphics/Vulkan/VulkanReSTIRHandler.h"
+#include "Graphics/Vulkan/VulkanDescriptor.h"
 
 void VulkanReSTIRHandler::CreateReSTIRBuffers(VkDevice const& _logicalDevice, VmaAllocator& _allocator, glm::uvec2 const& _renderDims)
 {

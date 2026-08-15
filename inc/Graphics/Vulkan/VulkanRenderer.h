@@ -5,18 +5,18 @@
     Includes
 *****************************************************/
 #include <Graphics/RendererBase.h>
-#include <Graphics/VulkanPipeline.h>
-#include <Graphics/VulkanDescriptorPool.h>
-#include <Graphics/VulkanDescriptor.h>
-#include <Graphics/VulkanReSTIRHandler.h>
+#include <Graphics/Vulkan/VulkanPipeline.h>
+#include <Graphics/Vulkan/VulkanDescriptorPool.h>
+#include <Graphics/Vulkan/VulkanDescriptor.h>
+#include <Graphics/Vulkan/VulkanReSTIRHandler.h>
 #include "vulkan/vulkan.h"
 #include <optional>
 #include <functional>
 #include <deque>
 #include "Vulkan/Include/vma/vk_mem_alloc.h"
-#include "Graphics/VulkanTypes.h"
-#include "Graphics/VulkanShader.h"
-#include "Graphics/VulkanLoader.h"
+#include "Graphics/Vulkan/VulkanTypes.h"
+#include "Graphics/Vulkan/VulkanShader.h"
+#include "Graphics/Vulkan/VulkanLoader.h"
 
 // Required manager includes
 #include "Managers/WindowsManager.h"

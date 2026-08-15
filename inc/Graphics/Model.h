@@ -1,9 +1,12 @@
 #ifndef MODEL_H
 #define MODEL_H
 
+/*****************************************************
+	Includes
+*****************************************************/
 #include <vector>
 #include <Graphics/GraphicsDefine.h>
-#include <Graphics/VulkanTypes.h>
+#include <Graphics/Vulkan/VulkanTypes.h>
 
 class Model
 {

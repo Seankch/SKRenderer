@@ -1,17 +1,3 @@
-/*!
-All content © 2024 DigiPen Institute of Technology Singapore, all rights reserved.
-@file       Text.cp
-@author     Sean Kwek Chin Huat
-@co-author
-
-----------------------------------------------------------------------------
-
-@course     CSD3401F24
-@project    CSD3401F24 Software Engineering Project 5
-
-@brief      This file contains definitions for functions to store text properties.
-*//*______________________________________________________________________*/
-
 #include <Components/Text.h>
 #include <rttr/registration>
 #include "EngineUI/Properties.h"

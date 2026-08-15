@@ -8,7 +8,7 @@
 #include <Managers/ManagerBase.h>
 
 // Graphics Renderers
-#include <Graphics/VulkanRenderer.h>
+#include <Graphics/Vulkan/VulkanRenderer.h>
 
 // Class for the engine's graphics system
 class RendererManager : public ManagerBase

@@ -1,8 +1,8 @@
 /*****************************************************
     Includes
 *****************************************************/
-#include "Graphics/VulkanPipeline.h"
-#include "Graphics/VulkanTypes.h"
+#include "Graphics/Vulkan/VulkanPipeline.h"
+#include "Graphics/Vulkan/VulkanTypes.h"
 #include <stdexcept>
 #include <array>
 
