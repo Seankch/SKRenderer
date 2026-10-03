@@ -2,6 +2,8 @@
 
 // Render passes
 #include "Graphics/RenderGraph/RenderPasses/GBufferPass.h"
+#include "Graphics/RenderGraph/RenderPasses/LightingPass.h"
+#include "Graphics/RenderGraph/RenderPasses/FinalPass.h"
 
 GraphicsSystem::GraphicsSystem(WindowsManager* _wm, ResourceManager* _rm, EntityManager* _em, RendererManager* _rendererMgr)
 : mIsMaximized{}, mRendererType{ RT_RASTERIZE }, windowsMgr{ _wm }, resourceMgr{ _rm }, entityMgr{ _em }, rendererMgr{ _rendererMgr }
@@ -15,7 +17,12 @@ GraphicsSystem::~GraphicsSystem()
 void GraphicsSystem::Load()
 {
     // Setup render passes
-    mRenderGraph.AddPass(new GBufferPass("GBuffer", {}, { "Position, Normals, Albedo" })); // GBuffer pass
+    mRenderGraph.AddPass(new GBufferPass("GBufferPass", {}, { "Position, Normals, Albedo" }));
+    mRenderGraph.AddPass(new LightingPass("LightingPass", { "Position, Normals, Albedo" }, { "LightingOutput" }));
+    mRenderGraph.AddPass(new FinalPass("FinalPass", { "LightingOutput" }, { FINAL_OUTPUT }));
+    
+    // Compile render graph once all passses are added
+    mRenderGraph.Compile();
 }
 
 void GraphicsSystem::LateLoad()

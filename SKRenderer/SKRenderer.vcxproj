@@ -148,7 +148,9 @@
     <ClInclude Include="..\inc\Graphics\RendererBase.h" />
     <ClInclude Include="..\inc\Graphics\RenderGraph\RenderGraph.h" />
     <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPassBase.h" />
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPasses\FinalPass.h" />
     <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPasses\GBufferPass.h" />
+    <ClInclude Include="..\inc\Graphics\RenderGraph\RenderPasses\LightingPass.h" />
     <ClInclude Include="..\inc\Graphics\Shader.h" />
     <ClInclude Include="..\inc\Graphics\Texture.h" />
     <ClInclude Include="..\inc\Graphics\Vulkan\VulkanDescriptor.h" />
@@ -190,7 +192,9 @@
     <ClCompile Include="..\src\Graphics\Model.cpp" />
     <ClCompile Include="..\src\Graphics\ObjectPicker.cpp" />
     <ClCompile Include="..\src\Graphics\RenderGraph\RenderGraph.cpp" />
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderPasses\FinalPass.cpp" />
     <ClCompile Include="..\src\Graphics\RenderGraph\RenderPasses\GBufferPass.cpp" />
+    <ClCompile Include="..\src\Graphics\RenderGraph\RenderPasses\LightingPass.cpp" />
     <ClCompile Include="..\src\Graphics\Shader.cpp" />
     <ClCompile Include="..\src\Graphics\Texture.cpp" />
     <ClCompile Include="..\src\Graphics\Vulkan\VulkanDescriptor.cpp" />

@@ -12,6 +12,9 @@
 #include <Graphics/Material.h>
 #include <Graphics/RenderContext.h>
 
+// Final output string
+#define FINAL_OUTPUT "FinalOutput"
+
 class RenderPassBase
 {
 public:

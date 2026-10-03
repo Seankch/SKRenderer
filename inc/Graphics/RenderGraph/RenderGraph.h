@@ -24,8 +24,13 @@ public:
     // Destroy passes
     void Destroy(void);
 private:
-    std::unordered_map<std::string, RenderPassBase*> renderPasses;
-    std::vector<RenderPassBase*> sortedRenderPasses;
+    // Misc functions
+    void TopologicalSort(void);
+    void DFS(int _index, std::vector<bool>& _visited, std::vector<RenderPassBase*> const& _passList);
+
+    // Render passes
+    std::vector<RenderPassBase*> renderPasses;
+    std::vector<std::vector<size_t>> adjacencyList; // For topo sort
 };
 
 #endif
